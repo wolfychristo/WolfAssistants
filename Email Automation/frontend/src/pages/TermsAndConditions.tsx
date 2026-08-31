@@ -111,7 +111,7 @@ const TermsAndConditions: React.FC = () => {
               </p>
               <div className="mt-4 p-4 bg-gray-50 rounded-lg">
                 <p className="text-gray-700">
-                  <strong>Email:</strong> info@wolfassistants.com<br />
+                  <strong>Email:</strong> info@yourcompany.com<br />
                   <strong></strong><br />
                   <strong></strong>
                 </p>

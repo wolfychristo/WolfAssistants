@@ -68,7 +68,7 @@ const ReturnPolicy: React.FC = () => {
               
               <div className="bg-gray-50 p-6 rounded-lg">
                 <ol className="list-decimal list-inside text-gray-700 space-y-3">
-                  <li>Contact our support team at info@wolfassistants.com</li>
+                  <li>Contact our support team at info@yourcompany.com</li>
                   <li>Provide your account email and reason for refund</li>
                   <li>Include any relevant documentation or screenshots</li>
                   <li>Our team will review your request within 2-3 business days</li>
@@ -129,7 +129,7 @@ const ReturnPolicy: React.FC = () => {
               </p>
               <div className="mt-4 p-4 bg-gray-50 rounded-lg">
                 <p className="text-gray-700">
-                  <strong>Email:</strong> info@wolfassistants.com<br />
+                  <strong>Email:</strong> info@yourcompany.com<br />
                   <strong></strong><br />
                   <strong>Business Hours:</strong> Monday - Friday, 9:00 AM - 6:00 PM EST
                 </p>

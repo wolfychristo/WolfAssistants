@@ -1,4 +1,6 @@
 # Backend-specific ignore
+*.md
+
 .env
 .env.*
 !.env.example
@@ -23,6 +25,14 @@ logs/
 audit.log
 application.log
 security_audit.log
+
+# Diagnostic & test scripts
+check_*.py
+diagnose_*.py
+setup_demo_*.py
+trigger_*.py
+delete_users_*.py
+verify_attachments_migration.py
 
 temp_attachments/*
 !temp_attachments/.gitkeep

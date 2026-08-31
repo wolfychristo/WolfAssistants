@@ -679,7 +679,7 @@ def _resolve_per_user_smtp(owner_email: str | None) -> tuple[str | None, int | N
             from_addr = u.smtp_from
             
             # Fix for Hostinger: Use full email address as username if username doesn't contain @
-            # Hostinger requires the full email address (e.g., info@thewascard.com) not just username part
+            # Hostinger requires the full email address (e.g., info@yourcompany.com) not just username part
             host_lower = host.lower() if host else ""
             if 'hostinger' in host_lower and user and '@' not in user:
                 # If username doesn't have @, try using from_addr if it has @
@@ -4447,17 +4447,17 @@ def ingest_imap(request: Request, db: Session = Depends(get_tenant_db_dependency
                     "If the client proposed times, extract them and return schedule with keys: title, start_iso, end_iso (ISO 8601; assume UTC if unspecified). "
                     "If no times are present, set schedule to null. "
                     "ABSOLUTE RULES - FOLLOW EXACTLY: "
-                    "1. If client says 'Hey, Christo', address them as 'Christo' - NOT 'Harish' "
+                    "1. If client says 'Hey, Alex', address them as 'Alex' "
                     "2. If client proposes a specific time (e.g., 'September 10th, between 6 PM and 7 PM'), confirm it works and do NOT ask for alternatives "
                     "3. NEVER ask 'Could you please share a couple of times that work for you this week?' or similar questions "
                     "4. The email body must END with the signature - NO content after the signature "
                     "5. For meeting scheduling: use 2025-09-10T18:00:00Z to 2025-09-10T19:00:00Z for 'September 10th, between 6 PM and 7 PM' "
-                    "6. Use meeting title 'Call with [ClientName]' (e.g., 'Call with Christo') "
+                    "6. Use meeting title 'Call with [ClientName]' (e.g., 'Call with Alex') "
                     "7. NEVER mention specific booked meeting times to clients unless they are the person the meeting is scheduled with "
                     "8. If there are scheduling conflicts, the system will handle them automatically - do not mention conflicts in your response "
-                    "CORRECT EXAMPLE: Client says 'Hey, Christo. Shall we connect on September 10th, sometime between 6 PM and 7 PM?' "
-                    "Response: 'Hi Christo, September 10th between 6 PM and 7 PM works perfectly for me. I'll send you a calendar invite shortly.\\n\\nBest regards,\\nHarish\\nSales Rep, Wolf Assistants' "
-                    "Schedule: {title: 'Call with Christo', start_iso: '2025-09-10T18:00:00Z', end_iso: '2025-09-10T19:00:00Z'} "
+                    "CORRECT EXAMPLE: Client says 'Hey, Alex. Shall we connect on September 10th, sometime between 6 PM and 7 PM?' "
+                    "Response: 'Hi Alex, September 10th between 6 PM and 7 PM works perfectly for me. I\'ll send you a calendar invite shortly.\\n\\nBest regards,\\nTaylor\\nSales Rep, YourCompany' "
+                    "Schedule: {title: 'Call with Alex', start_iso: '2025-09-10T18:00:00Z', end_iso: '2025-09-10T19:00:00Z'} "
                     "CRITICAL: You MUST always include the schedule field with the exact date and time the client requested. Do NOT leave it null or empty. "
                     "\n\n"
                     "IMPORTANT: You MUST respond with a valid JSON object in this exact format:\n"
@@ -4761,7 +4761,7 @@ def ingest_imap(request: Request, db: Session = Depends(get_tenant_db_dependency
                         e = Email(
                             subject=sub,
                             body=body_txt,
-                            to_address=user,  # Use IMAP username (info@wolfassistants.com) as the recipient
+                            to_address=user,  # Use IMAP username (info@yourcompany.com) as the recipient
                             from_address=frm,
                             status=email_status,  # Use detected status (sent, spam, or received)
                             owner_email=owner,

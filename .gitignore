@@ -2,6 +2,27 @@
 # WolfAssistants - Comprehensive Git Ignore
 # ==========================================
 
+# --- Markdown Documents (ONLY root README.md is committed) ---
+*.md
+!/README.md
+
+# --- Test Files, Diagnostics, Demos & Research ---
+test/
+tests/
+test-*
+*.test.*
+*.spec.*
+test-files.js
+test-local-build.*
+check_*.py
+diagnose_*.py
+setup_demo_*.py
+trigger_*.py
+delete_users_*.py
+clear-ts-cache.*
+Research/
+.agents/
+
 # --- Environment Variables & Secrets (CRITICAL: NEVER COMMIT) ---
 .env
 .env.*

@@ -95,7 +95,7 @@ const PricingPage: React.FC = () => {
       buttonText: 'Talk to Sales',
       buttonVariant: 'outline' as const,
       buttonAction: 'mailto' as const,
-      buttonTarget: 'sales@wolfassistants.com'
+      buttonTarget: 'sales@yourcompany.com'
     }
   ];
 

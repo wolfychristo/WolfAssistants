@@ -376,7 +376,7 @@ def change_admin_status(
     admin_user = _get_admin_user(request, db)
     
     # Verify primary admin authorization
-    if admin_user.email != 'christopherharish88@gmail.com':
+    if admin_user.email != 'admin@yourcompany.com':
         raise HTTPException(
             status_code=403, 
             detail="Only primary admin can manage admin privileges"
@@ -458,14 +458,14 @@ def direct_admin_update(
     admin_user = _get_admin_user(request, db)
     
     # Verify primary admin authorization
-    if admin_user.email != 'christopherharish88@gmail.com':
+    if admin_user.email != 'admin@yourcompany.com':
         raise HTTPException(
             status_code=403, 
             detail="Only primary admin can perform direct admin updates"
         )
     
     # Prevent self-demotion (primary admin protection)
-    if admin_request.email == 'christopherharish88@gmail.com' and not admin_request.is_admin:
+    if admin_request.email == 'admin@yourcompany.com' and not admin_request.is_admin:
         raise HTTPException(
             status_code=403, 
             detail="Primary admin cannot remove their own admin privileges"

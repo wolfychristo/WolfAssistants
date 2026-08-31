@@ -23,9 +23,9 @@ class AdminManager:
             self.db.close()
     
     def get_primary_admin(self) -> User:
-        """Get the primary admin user (christopherharish88@gmail.com)"""
+        """Get the primary admin user (admin@yourcompany.com)"""
         admin = self.db.query(User).filter(
-            User.email == 'christopherharish88@gmail.com',
+            User.email == 'admin@yourcompany.com',
             User.is_admin == True
         ).first()
         
@@ -35,7 +35,7 @@ class AdminManager:
         return admin
     
     def verify_primary_admin_status(self) -> bool:
-        """Verify that christopherharish88@gmail.com is the primary admin"""
+        """Verify that admin@yourcompany.com is the primary admin"""
         try:
             admin = self.get_primary_admin()
             print(f"Primary Admin Verified: {admin.email}")
@@ -57,7 +57,7 @@ class AdminManager:
         
         for admin in admins:
             status = "Active" if admin.is_active else "Inactive"
-            primary = "PRIMARY" if admin.email == 'christopherharish88@gmail.com' else "Regular"
+            primary = "PRIMARY" if admin.email == 'admin@yourcompany.com' else "Regular"
             
             print(f"{primary} {admin.email}")
             print(f"   Name: {admin.full_name}")
@@ -83,7 +83,7 @@ class AdminManager:
             
             print(f"✅ User {email} has been promoted to admin")
             print(f"   Reason: {reason}")
-            print(f"   Promoted by: Primary Admin (christopherharish88@gmail.com)")
+            print(f"   Promoted by: Primary Admin (admin@yourcompany.com)")
             return True
             
         except Exception as e:
@@ -95,7 +95,7 @@ class AdminManager:
         """Demote an admin user (except primary admin)"""
         try:
             # Prevent demotion of primary admin
-            if email == 'christopherharish88@gmail.com':
+            if email == 'admin@yourcompany.com':
                 print(f"Cannot demote primary admin {email}")
                 print("   Primary admin privileges are protected and cannot be removed")
                 return False
@@ -115,7 +115,7 @@ class AdminManager:
             
             print(f"User {email} has been demoted from admin")
             print(f"   Reason: {reason}")
-            print(f"   Demoted by: Primary Admin (christopherharish88@gmail.com)")
+            print(f"   Demoted by: Primary Admin (admin@yourcompany.com)")
             return True
             
         except Exception as e:
@@ -127,7 +127,7 @@ class AdminManager:
         """Display admin capabilities and privileges"""
         print("\nADMIN CAPABILITIES & PRIVILEGES")
         print("=" * 50)
-        print("PRIMARY ADMIN (christopherharish88@gmail.com):")
+        print("PRIMARY ADMIN (admin@yourcompany.com):")
         print("   - Full system access")
         print("   - User management (create, delete, restore)")
         print("   - Admin promotion/demotion")
@@ -161,7 +161,7 @@ def main():
     # Verify primary admin status
     if not manager.verify_primary_admin_status():
         print("\nCRITICAL: Primary admin verification failed!")
-        print("   Please ensure christopherharish88@gmail.com is properly configured as admin.")
+        print("   Please ensure admin@yourcompany.com is properly configured as admin.")
         return
     
     # Display admin capabilities
@@ -171,7 +171,7 @@ def main():
     manager.list_all_admins()
     
     print("\nAdmin management system is operational")
-    print("   Primary admin: christopherharish88@gmail.com")
+    print("   Primary admin: admin@yourcompany.com")
     print("   Status: FULL ADMINISTRATIVE PRIVILEGES")
     print("   Protection: INDEFINITE ADMIN STATUS")
 

@@ -116,9 +116,9 @@ class LoginRequest(BaseModel):
 def _send_email(to_email: str, subject: str, body: str):
     host = settings.EMAIL_HOST
     port = settings.EMAIL_PORT or 587
-    user = settings.EMAIL_USER or 'wolfersquade@gmail.com'
+    user = settings.EMAIL_USER or 'info@yourcompany.com'
     password = settings.EMAIL_PASSWORD
-    from_addr = settings.EMAIL_FROM or 'wolfersquade@gmail.com'
+    from_addr = settings.EMAIL_FROM or 'info@yourcompany.com'
     if not host or not user or not password:
         # In dev, do not hard fail; log would be better, but here we raise to surface config issue
         raise HTTPException(status_code=500, detail="Email SMTP settings missing")

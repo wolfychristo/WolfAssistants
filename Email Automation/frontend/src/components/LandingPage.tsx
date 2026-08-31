@@ -483,7 +483,7 @@ const LandingPage: React.FC = () => {
               <ul className="space-y-3 text-gray-600">
                 <li><a href="/privacy" className="hover:text-gray-900 transition-colors">Privacy</a></li>
                 <li><a href="/terms" className="hover:text-gray-900 transition-colors">Terms</a></li>
-                <li><a href="mailto:info@wolfassistants.com" className="hover:text-gray-900 transition-colors">Contact</a></li>
+                <li><a href="mailto:info@yourcompany.com" className="hover:text-white transition-colors">Contact Us</a></li>
                 <li><a href="https://discord.gg/QwbZr6dgnT" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 transition-colors">Discord</a></li>
               </ul>
             </nav>

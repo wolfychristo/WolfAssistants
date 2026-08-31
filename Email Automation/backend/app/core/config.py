@@ -53,7 +53,7 @@ class Settings(BaseSettings):
     SYSTEM_EMAIL_PORT: Optional[int] = None
     SYSTEM_EMAIL_USER: Optional[str] = None
     SYSTEM_EMAIL_PASSWORD: Optional[str] = None
-    SYSTEM_EMAIL_FROM: str = "WolfAssistants <info@wolfassistants.com>"
+    SYSTEM_EMAIL_FROM: str = "WolfAssistants <info@yourcompany.com>"
     SYSTEM_EMAIL_USE_TLS: bool = True
     
     # Wolfy AI API - Single key (legacy)

@@ -1,10 +1,16 @@
+*.md
+
 # Dependencies
 node_modules/
 /.pnp
 .pnp.js
 
-# Testing
+# Testing & test files
 /coverage
+*.test.*
+*.spec.*
+test-files.js
+clear-ts-cache.ps1
 
 # Production Build
 /build

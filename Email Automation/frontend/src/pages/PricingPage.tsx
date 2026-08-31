@@ -91,7 +91,7 @@ const PricingPage: React.FC = () => {
       cta: 'Talk to Sales',
       ctaVariant: 'outline' as const,
       ctaAction: 'mailto' as const,
-      ctaTarget: 'sales@wolfassistants.com'
+      ctaTarget: 'sales@yourcompany.com'
     }
   ];
 
