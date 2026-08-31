@@ -254,9 +254,9 @@ Marketing Landing Page will run on an available port (e.g., **`http://localhost:
 | `DATABASE_URL` | `string` | Supabase / PostgreSQL connection URI | `postgresql+psycopg://postgres...` |
 | `CORS_ORIGINS` | `string` | Comma-separated list of allowed web origins | `http://localhost:3000,http://localhost:8000` |
 | `GEMINI_API_KEY_1..8` | `string` | Google Gemini API keys for the 8-key failover pool | `AIzaSy...` |
-| `SYSTEM_EMAIL_HOST` | `string` | Hostinger / SMTP server host | `smtp.hostinger.com` |
+| `SYSTEM_EMAIL_HOST` | `string` | Hostinger / SMTP server host | `smtp.abcd.com` |
 | `SYSTEM_EMAIL_PORT` | `int` | SMTP port (587 for TLS, 465 for SSL) | `587` |
-| `SYSTEM_EMAIL_USER` | `string` | System email address for OTPs/notifications | `info@wolfassistants.com` |
+| `SYSTEM_EMAIL_USER` | `string` | System email address for OTPs/notifications | `info@yourcompany.com` |
 | `SYSTEM_EMAIL_PASSWORD` | `string` | SMTP password / app password | `your-smtp-password` |
 | `SYSTEM_EMAIL_USE_TLS` | `bool` | Enable TLS security | `true` |
 | `JWT_SECRET_KEY` | `string` | Secret key for JWT token hashing | `your-jwt-secret` |
