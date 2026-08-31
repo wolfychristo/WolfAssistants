@@ -1,0 +1,32 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/pyright/main/packages/pyright/schema/pyrightconfig.schema.json",
+  "venvPath": "Email Automation/backend",
+  "venv": "venv",
+  "pythonVersion": "3.13",
+  "pythonPlatform": "Windows",
+  "include": [
+    "Email Automation/backend"
+  ],
+  "exclude": [
+    "**/node_modules",
+    "**/__pycache__",
+    "**/.*"
+  ],
+  "executionEnvironments": [
+    {
+      "root": "Email Automation/backend",
+      "pythonVersion": "3.13",
+      "pythonPlatform": "Windows",
+      "extraPaths": [
+        "Email Automation/backend",
+        "Email Automation/backend/venv/Lib/site-packages"
+      ],
+      "venv": "venv",
+      "venvPath": "Email Automation/backend"
+    }
+  ],
+  "reportMissingImports": "warning",
+  "reportMissingModuleSource": "warning",
+  "typeCheckingMode": "basic",
+  "useLibraryCodeForTypes": true
+}

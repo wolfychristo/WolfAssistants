@@ -1,0 +1,37 @@
+{
+  "venvPath": "backend",
+  "venv": "venv",
+  "pythonPath": "backend/venv/Scripts/python.exe",
+  "pythonVersion": "3.13",
+  "pythonPlatform": "Windows",
+  "include": [
+    "backend"
+  ],
+  "exclude": [
+    "**/node_modules",
+    "**/__pycache__",
+    "**/.*"
+  ],
+  "extraPaths": [
+    "backend",
+    "backend/venv/Lib/site-packages"
+  ],
+  "executionEnvironments": [
+    {
+      "root": "backend",
+      "pythonVersion": "3.13",
+      "pythonPlatform": "Windows",
+      "extraPaths": [
+        "backend",
+        "backend/venv/Lib/site-packages"
+      ],
+      "venv": "venv",
+      "venvPath": "backend"
+    }
+  ],
+  "reportMissingImports": "none",
+  "reportMissingModuleSource": "none",
+  "typeCheckingMode": "off",
+  "useLibraryCodeForTypes": true
+}
+

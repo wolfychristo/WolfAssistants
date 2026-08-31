@@ -1,0 +1,44 @@
+# Email Automation Platform Dependencies
+
+# FastAPI and ASGI
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic-settings==2.1.0
+
+# Database
+sqlalchemy==2.0.31
+alembic==1.13.1
+psycopg2-binary==2.9.11
+
+# Authentication and Security
+python-jose[cryptography]==3.3.0
+bcrypt==4.1.2
+python-multipart==0.0.6
+email-validator==2.1.0
+PyJWT==2.8.0
+passlib[bcrypt]==1.7.4
+
+# Email and HTTP
+python-dotenv==1.0.0
+requests==2.31.0
+aiofiles==23.2.1
+
+# AI and Processing
+google-generativeai==0.3.2
+litellm==1.15.2
+
+# Background Tasks
+apscheduler==3.10.4
+
+# System Monitoring
+psutil==5.9.8
+
+# HTTP Client
+httpx==0.25.2
+
+# DNS resolution for SPF/DKIM checks
+dnspython==2.6.1
+
+# Testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
